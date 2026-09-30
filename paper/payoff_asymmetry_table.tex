@@ -1,0 +1,28 @@
+\begin{table}[H]
+\centering
+\caption{Payoff asymmetry and directional accuracy in selected strategies}
+\label{tab:payoff_asymmetry}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lrrrrrr}
+\toprule
+Strategy & Accuracy & $\mu^{+}$ & $\mu^{-}$ & $p^{\ast}$ & Timing & PT Stat. (p) \\
+\midrule
+Daily CMA Losers (k = 13) & 50.6\% & 0.450\% & 0.476\% & 51.4\% & -0.39 & 1.06 (0.144) \\
+Daily HML Logit & 53.1\% & 0.546\% & 0.536\% & 49.6\% & 1.90 & 2.05 (0.020) \\
+Daily HML KNN15 & 51.9\% & 0.546\% & 0.536\% & 49.6\% & 1.25 & 1.05 (0.146) \\
+Daily RMW KNN11 & 51.7\% & 1.400\% & 1.403\% & 50.1\% & 2.34 & 1.72 (0.042) \\
+Daily CMA KNN3 & 50.5\% & 0.471\% & 0.468\% & 49.8\% & 0.33 & 0.26 (0.397) \\
+Daily SMB KNN3 & 49.9\% & 0.586\% & 0.562\% & 48.9\% & 0.57 & -0.24 (0.593) \\
+Weekly HML Winners (k = 13) & 52.3\% & 1.150\% & 1.106\% & 49.0\% & 3.70 & 0.81 (0.208) \\
+Weekly CMA Losers (k = 13) & 50.4\% & 1.008\% & 1.018\% & 50.2\% & 0.22 & 0.51 (0.304) \\
+Weekly CMA KNN23 & 48.3\% & 1.060\% & 0.970\% & 47.8\% & 0.61 & -1.36 (0.913) \\
+Weekly HML KNN15 & 52.0\% & 1.231\% & 1.111\% & 47.4\% & 5.38 & 0.68 (0.249) \\
+Weekly RMW KNN11 & 53.0\% & 3.114\% & 2.991\% & 49.0\% & 12.25 & 1.17 (0.122) \\
+Weekly SMB KNN23 & 52.4\% & 1.297\% & 1.163\% & 47.3\% & 6.32 & 1.06 (0.144) \\
+\bottomrule
+\end{tabular}}
+\begin{flushleft}
+\footnotesize{\textit{Notes:} $\mu^{+}$ and $\mu^{-}$ are the average absolute ETF proxy spreads $|F^{ETF}_{j,t}|$ in correctly and incorrectly classified periods. $p^{\ast}=\mu^{-}/(\mu^{+}+\mu^{-})$ is the break-even accuracy. Timing is the average gross timing component $\frac{1}{2}d_{j,t}F^{ETF}_{j,t}$, in basis points per day or per week. PT Stat. is the Pesaran and Timmermann directional statistic with its one-sided p-value. All strategy returns are net of 2 basis points per switch, while the timing component is shown before costs.}
+\end{flushleft}
+\end{table}
