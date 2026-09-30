@@ -6,7 +6,7 @@ import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = BASE_DIR / "outputs"
-TABLE_PATH = BASE_DIR / "paper" / "payoff_asymmetry_table.tex"
+TABLE_PATH = OUTPUT_DIR / "payoff_asymmetry_table.tex"
 CSV_PATH = OUTPUT_DIR / "paper_payoff_asymmetry_table.csv"
 
 
