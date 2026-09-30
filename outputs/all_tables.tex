@@ -1,0 +1,338 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.65in,landscape]{geometry}
+
+\usepackage{booktabs}
+
+\usepackage{graphicx}
+
+\usepackage{float}
+
+\begin{document}
+
+\section*{Tables for ETF Factor Proxy Replication Study}
+
+\begin{table}[H]
+\centering
+\caption{ETF proxy definition validation}
+\label{tab:proxy_horse_race}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllllll}
+\toprule
+Factor & Candidate & Corr. & Sign match & Beta & t-stat & R2 & Raw TE \\
+\midrule
+SMB & IJR - SPY* & 92.3\% & 87.2\% & 0.828 & 129.3*** & 85.3\% & 4.6\% \\
+SMB & IJR - QUAL & 89.7\% & 85.0\% & 0.775 & 109.2*** & 80.5\% & 5.5\% \\
+SMB & IJR - SPHQ & 88.9\% & 83.5\% & 0.740 & 104.3*** & 79.0\% & 6.0\% \\
+SMB & IJR - QQQ & 74.7\% & 75.9\% & 0.485 & 60.5*** & 55.9\% & 11.2\% \\
+HML & SPYV - SPYG* & 75.5\% & 76.3\% & 0.904 & 61.9*** & 57.1\% & 9.2\% \\
+HML & SPYV - QQQ & 77.1\% & 76.4\% & 0.773 & 65.1*** & 59.5\% & 9.4\% \\
+HML & SPYV - SPY & 74.2\% & 74.5\% & 1.607 & 59.5*** & 55.1\% & 10.1\% \\
+HML & SPYV - ARKK & 55.3\% & 68.6\% & 0.244 & 35.7*** & 30.6\% & 26.6\% \\
+RMW & QUAL - ARKK* & 65.1\% & 69.4\% & 0.191 & 46.1*** & 42.4\% & 24.3\% \\
+RMW & SPHQ - SPHB & 29.0\% & 64.5\% & 0.151 & 16.3*** & 8.4\% & 16.0\% \\
+RMW & QUAL - SPHB & 28.6\% & 62.9\% & 0.161 & 16.1*** & 8.2\% & 15.1\% \\
+RMW & QUAL - SPY & 16.4\% & 56.6\% & 0.427 & 8.9*** & 2.7\% & 8.6\% \\
+CMA & SPHQ - QQQ* & 57.3\% & 70.2\% & 0.438 & 37.6*** & 32.8\% & 8.4\% \\
+CMA & SPYV - SPYG & 53.6\% & 69.2\% & 0.352 & 34.1*** & 28.8\% & 10.0\% \\
+CMA & SPLV - QQQ & 52.9\% & 68.0\% & 0.241 & 33.5*** & 27.9\% & 14.3\% \\
+CMA & SPLV - SPHB & 19.8\% & 54.3\% & 0.068 & 10.8*** & 3.9\% & 22.1\% \\
+\bottomrule
+\end{tabular}}
+\begin{flushleft}
+\footnotesize{\textit{Notes:} Asterisk denotes the proxy used in the main empirical analysis.}
+\end{flushleft}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Validation of ETF proxies against Fama and French factors}
+\label{tab:proxy_validation}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllllll}
+\toprule
+Factor & Corr. & Sign match & Beta & t-stat & R2 & Raw TE & Residual vol. \\
+\midrule
+SMB & 92.3\% & 87.2\% & 0.828 & 129.3 & 85.3\% & 4.6\% & 4.1\% \\
+HML & 75.5\% & 76.3\% & 0.904 & 61.9 & 57.1\% & 9.2\% & 9.2\% \\
+RMW & 65.1\% & 69.4\% & 0.191 & 46.1 & 42.4\% & 24.3\% & 6.5\% \\
+CMA & 57.3\% & 70.2\% & 0.438 & 37.6 & 32.8\% & 8.4\% & 6.3\% \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Primary daily Losers strategy and SPY benchmark}
+\label{tab:primary_strategy}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllllllllll}
+\toprule
+Factor & Strategy & A / B & Acc. & Final & CAGR & Vol. & Sharpe & MDD & Switches & Alpha & Beta \\
+\midrule
+CMA & CMA-13L & SPHQ / QQQ & 50.6\% & 454.9 & 14.2\% & 20.1\% & 0.760 & -32.9\% & 311 & -0.1\% & 1.080 \\
+HML & HML-13L & SPYV / SPYG & 49.4\% & 318.0 & 10.7\% & 18.8\% & 0.632 & -36.9\% & 321 & -2.4\% & 1.008 \\
+RMW & RMW-13L & QUAL / ARKK & 48.0\% & 180.9 & 5.3\% & 31.4\% & 0.323 & -71.5\% & 278 & -9.1\% & 1.349 \\
+SMB & SMB-13L & IJR / SPY & 50.2\% & 356.5 & 11.8\% & 20.6\% & 0.645 & -42.5\% & 330 & -1.5\% & 1.040 \\
+SPY & Buy and hold & SPY &  & 425.2 & 13.5\% & 17.7\% & 0.807 & -33.7\% &  &  &  \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Daily Winners and Losers comparison at k=13}
+\label{tab:winners_losers_comparison}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllllll}
+\toprule
+Factor & Rule & Accuracy & Final & CAGR & Sharpe & MDD & Switches \\
+\midrule
+CMA & Losers & 50.6\% & 454.9 & 14.2\% & 0.760 & -32.9\% & 311 \\
+CMA & Winners & 49.4\% & 581.4 & 16.7\% & 0.897 & -30.7\% & 311 \\
+HML & Losers & 49.4\% & 318.0 & 10.7\% & 0.632 & -36.9\% & 321 \\
+HML & Winners & 50.6\% & 458.3 & 14.3\% & 0.826 & -31.3\% & 321 \\
+RMW & Losers & 48.0\% & 180.9 & 5.3\% & 0.323 & -71.5\% & 278 \\
+RMW & Winners & 52.0\% & 812.9 & 20.2\% & 0.789 & -46.6\% & 278 \\
+SMB & Losers & 50.2\% & 356.5 & 11.8\% & 0.645 & -42.5\% & 330 \\
+SMB & Winners & 49.8\% & 308.7 & 10.4\% & 0.603 & -33.7\% & 330 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Selected classification strategy results}
+\label{tab:classification_results}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lllllllll}
+\toprule
+Frequency & Factor & Strategy & Final & CAGR & Vol. & Sharpe & MDD & Switches \\
+\midrule
+Daily & HML & HML-Logit & 583.3 & 18.5\% & 19.4\% & 0.974 & -30.3\% & 469 \\
+Daily & RMW & RMW-KNN11 & 617.2 & 19.2\% & 29.1\% & 0.748 & -43.2\% & 920 \\
+Daily & CMA & CMA-KNN3 & 446.6 & 15.5\% & 20.2\% & 0.815 & -32.8\% & 1042 \\
+Daily & SMB & SMB-KNN3 & 313.2 & 11.6\% & 20.2\% & 0.646 & -35.2\% & 1151 \\
+Weekly & HML & HML-KNN15 & 511.2 & 17.0\% & 17.6\% & 0.983 & -30.9\% & 213 \\
+Weekly & RMW & RMW-KNN11 & 701.7 & 20.6\% & 31.9\% & 0.747 & -68.4\% & 233 \\
+Weekly & SMB & SMB-KNN23 & 468.7 & 16.0\% & 19.3\% & 0.868 & -32.5\% & 198 \\
+Weekly & CMA & CMA-KNN23 & 502.4 & 16.8\% & 18.9\% & 0.918 & -29.9\% & 193 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Selected strategy performance at 0, 1, and 2 bps per switch}
+\label{tab:cost_012}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllll}
+\toprule
+Frequency & Strategy & SPY final & 0 bps & 1 bps & 2 bps \\
+\midrule
+Daily & HML-Logit & 410.2 & 640.7$^{\dagger}$ / 1.02 & 611.3$^{\dagger}$ / 1.00 & 583.3$^{\dagger}$ / 0.97 \\
+Daily & RMW-KNN11 & 410.2 & 741.7$^{\dagger}$ / 0.81 & 676.6$^{\dagger}$ / 0.78 & 617.2$^{\dagger}$ / 0.75 \\
+Daily & CMA-KNN3 & 410.2 & 550.0$^{\dagger}$ / 0.91 & 495.6$^{\dagger}$ / 0.87 & 446.6$^{\dagger}$ / 0.82 \\
+Daily & SMB-KNN3 & 410.2 & 394.2 / 0.76 & 351.4 / 0.70 & 313.2 / 0.65 \\
+Weekly & HML-KNN15 & 414.5 & 533.4$^{\dagger}$ / 1.01 & 522.2$^{\dagger}$ / 0.99 & 511.2$^{\dagger}$ / 0.98 \\
+Weekly & RMW-KNN11 & 414.5 & 735.1$^{\dagger}$ / 0.76 & 718.2$^{\dagger}$ / 0.75 & 701.7$^{\dagger}$ / 0.75 \\
+Weekly & SMB-KNN23 & 414.5 & 487.6$^{\dagger}$ / 0.89 & 478.1$^{\dagger}$ / 0.88 & 468.7$^{\dagger}$ / 0.87 \\
+Weekly & CMA-KNN23 & 414.5 & 522.1$^{\dagger}$ / 0.94 & 512.1$^{\dagger}$ / 0.93 & 502.4$^{\dagger}$ / 0.92 \\
+\bottomrule
+\end{tabular}}
+\begin{flushleft}
+\footnotesize{\textit{Notes:} Each strategy cell reports terminal wealth followed by annualized Sharpe ratio. Dagger indicates terminal wealth exceeds SPY over the same sample.}
+\end{flushleft}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Out of sample strategy performance}
+\label{tab:oos_results}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lllllllll}
+\toprule
+Factor & Obs. & Final & CAGR & Vol. & Sharpe & MDD & Switches & Acc. \\
+\midrule
+CMA & 752 & 200.6 & 26.3\% & 17.1\% & 1.453 & -20.3\% & 111 & 50.0\% \\
+HML & 251 & 97.0 & -3.0\% & 17.3\% & -0.087 & -19.3\% & 32 & 51.0\% \\
+RMW & 251 & 91.6 & -8.4\% & 23.4\% & -0.258 & -28.9\% & 31 & 47.8\% \\
+SMB & 582 & 174.4 & 27.2\% & 19.4\% & 1.340 & -22.5\% & 80 & 52.6\% \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Single proxy regression estimates}
+\label{tab:single_proxy_regressions}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lllllll}
+\toprule
+Factor & Term & Coef. & Std. Err. & t-Stat & R2 & Obs. \\
+\midrule
+SMB & Intercept & 0.00001 & 0.00005 & 0.17 & 85.3\% & 2889 \\
+SMB & SMB proxy & 0.82846 & 0.00641 & 129.29 & 85.3\% &  \\
+HML & Intercept & 0.00015 & 0.00011 & 1.43 & 57.1\% & 2889 \\
+HML & HML proxy & 0.90358 & 0.01459 & 61.93 & 57.1\% &  \\
+RMW & Intercept & 0.00014 & 0.00008 & 1.91 & 42.4\% & 2889 \\
+RMW & RMW proxy & 0.19120 & 0.00415 & 46.07 & 42.4\% &  \\
+CMA & Intercept & 0.00005 & 0.00007 & 0.66 & 32.8\% & 2889 \\
+CMA & CMA proxy & 0.43838 & 0.01167 & 37.58 & 32.8\% &  \\
+\bottomrule
+\end{tabular}}
+\begin{flushleft}
+\footnotesize{\textit{Notes:} The dependent variable is the daily Fama French factor return. Conventional OLS standard errors.}
+\end{flushleft}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Transaction cost sensitivity: final wealth and Sharpe ratio}
+\label{tab:cost_sensitivity}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lllll}
+\toprule
+Strategy & 0 bps & 2 bps & 5 bps & 10 bps \\
+\midrule
+Daily CMA Losers & 484.1 / 0.787 & 454.9 / 0.760 & 414.4 / 0.719 & 354.7 / 0.651 \\
+Daily HML Logit & 640.7 / 1.021 & 583.3 / 0.974 & 506.8 / 0.904 & 400.8 / 0.787 \\
+Weekly HML KNN & 533.4 / 1.006 & 511.2 / 0.983 & 479.6 / 0.948 & 431.3 / 0.889 \\
+Weekly SMB KNN & 487.6 / 0.887 & 468.7 / 0.868 & 441.7 / 0.838 & 400.2 / 0.788 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Weekly KNN strategy performance, best k per factor}
+\label{tab:weekly_knn_best_k}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllllllllll}
+\toprule
+Factor & Strategy & A/B & Acc. & Final & CAGR & Vol. & Sharpe & MDD & Switches & Alpha & Beta \\
+\midrule
+CMA & CMA-KNN23 & SPHQ / QQQ & 48.3\% & 502.4 & 16.8\% & 18.9\% & 0.918 & -29.9\% & 193 & 1.7\% & 1.038 \\
+HML & HML-KNN15 & SPYV / SPYG & 52.0\% & 511.2 & 17.0\% & 17.6\% & 0.983 & -30.9\% & 213 & 2.5\% & 0.978 \\
+RMW & RMW-KNN11 & QUAL / ARKK & 53.0\% & 701.7 & 20.6\% & 31.9\% & 0.747 & -68.4\% & 233 & 2.6\% & 1.405 \\
+SMB & SMB-KNN23 & IJR / SPY & 52.4\% & 468.7 & 16.0\% & 19.3\% & 0.868 & -32.5\% & 198 & 1.0\% & 1.042 \\
+\bottomrule
+\end{tabular}}
+\begin{flushleft}
+\footnotesize{\textit{Notes:} Best k is selected by full sample Sharpe ratio at 2 bps per switch.}
+\end{flushleft}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Daily and weekly logistic regression strategy performance}
+\label{tab:logistic_daily_weekly}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lllllllllll}
+\toprule
+Freq. & Factor & A/B & Acc. & Final & CAGR & Vol. & Sharpe & MDD & Switches & Alpha / Beta \\
+\midrule
+Daily & CMA & SPHQ / QQQ & 49.8\% & 460.3 & 15.8\% & 20.9\% & 0.808 & -36.0\% & 533 & 0.2\% / 1.098 \\
+Daily & HML & SPYV / SPYG & 53.1\% & 583.3 & 18.5\% & 19.4\% & 0.974 & -30.3\% & 469 & 3.2\% / 1.028 \\
+Daily & RMW & QUAL / ARKK & 50.6\% & 427.1 & 15.0\% & 31.9\% & 0.599 & -69.0\% & 656 & -1.0\% / 1.322 \\
+Daily & SMB & IJR / SPY & 49.4\% & 227.8 & 8.3\% & 19.8\% & 0.500 & -41.7\% & 570 & -5.7\% / 1.029 \\
+Weekly & CMA & SPHQ / QQQ & 48.3\% & 471.3 & 16.1\% & 18.9\% & 0.887 & -32.4\% & 172 & 1.1\% / 1.035 \\
+Weekly & HML & SPYV / SPYG & 51.9\% & 335.4 & 12.4\% & 17.3\% & 0.762 & -33.6\% & 165 & -1.3\% / 0.958 \\
+Weekly & RMW & QUAL / ARKK & 48.0\% & 269.4 & 10.0\% & 32.3\% & 0.456 & -60.5\% & 169 & -6.4\% / 1.397 \\
+Weekly & SMB & IJR / SPY & 51.3\% & 368.5 & 13.4\% & 20.7\% & 0.710 & -38.3\% & 171 & -2.1\% / 1.109 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Sensitivity of KNN to the number of neighbors k: Sharpe ratio}
+\label{tab:knn_k_sensitivity_sharpe}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllllllllllll}
+\toprule
+Freq. & Factor & 3 & 5 & 7 & 9 & 11 & 13 & 15 & 17 & 19 & 21 & 23 & 25 \\
+\midrule
+Daily & CMA & 0.82 & 0.77 & 0.78 & 0.69 & 0.70 & 0.65 & 0.61 & 0.66 & 0.63 & 0.69 & 0.71 & 0.60 \\
+Daily & HML & 0.64 & 0.65 & 0.80 & 0.78 & 0.76 & 0.81 & 0.86 & 0.75 & 0.82 & 0.85 & 0.78 & 0.76 \\
+Daily & RMW & 0.55 & 0.59 & 0.65 & 0.66 & 0.75 & 0.72 & 0.62 & 0.58 & 0.63 & 0.60 & 0.71 & 0.57 \\
+Daily & SMB & 0.65 & 0.53 & 0.56 & 0.63 & 0.55 & 0.50 & 0.56 & 0.51 & 0.53 & 0.57 & 0.49 & 0.58 \\
+Weekly & CMA & 0.81 & 0.83 & 0.84 & 0.80 & 0.82 & 0.91 & 0.90 & 0.90 & 0.89 & 0.86 & 0.92 & 0.92 \\
+Weekly & HML & 0.85 & 0.73 & 0.74 & 0.82 & 0.95 & 0.95 & 0.98 & 0.93 & 0.78 & 0.76 & 0.81 & 0.85 \\
+Weekly & RMW & 0.63 & 0.71 & 0.53 & 0.66 & 0.75 & 0.65 & 0.63 & 0.58 & 0.63 & 0.63 & 0.57 & 0.50 \\
+Weekly & SMB & 0.57 & 0.64 & 0.78 & 0.81 & 0.76 & 0.72 & 0.81 & 0.84 & 0.77 & 0.78 & 0.87 & 0.82 \\
+\bottomrule
+\end{tabular}}
+\begin{flushleft}
+\footnotesize{\textit{Notes:} Values are annualized Sharpe ratios net of 2 bps per switch.}
+\end{flushleft}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+\centering
+\caption{Payoff asymmetry and directional accuracy in selected strategies}
+\label{tab:payoff_asymmetry}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lllllll}
+\toprule
+Strategy & Accuracy & mu+ & mu- & p* & Timing & PT Stat. (p) \\
+\midrule
+Daily CMA Losers (k = 13) & 50.6\% & 0.450\% & 0.476\% & 51.4\% & -0.39 & 1.06 (0.144) \\
+Daily HML Logit & 53.1\% & 0.546\% & 0.536\% & 49.6\% & 1.90 & 2.05 (0.020) \\
+Daily HML KNN15 & 51.9\% & 0.546\% & 0.536\% & 49.6\% & 1.25 & 1.05 (0.146) \\
+Daily RMW KNN11 & 51.7\% & 1.400\% & 1.403\% & 50.1\% & 2.34 & 1.72 (0.042) \\
+Daily CMA KNN3 & 50.5\% & 0.471\% & 0.468\% & 49.8\% & 0.33 & 0.26 (0.397) \\
+Daily SMB KNN3 & 49.9\% & 0.586\% & 0.562\% & 48.9\% & 0.57 & -0.24 (0.593) \\
+Weekly HML Winners (k = 13) & 52.3\% & 1.150\% & 1.106\% & 49.0\% & 3.70 & 0.81 (0.208) \\
+Weekly CMA Losers (k = 13) & 50.4\% & 1.008\% & 1.018\% & 50.2\% & 0.22 & 0.51 (0.304) \\
+Weekly CMA KNN23 & 48.3\% & 1.060\% & 0.970\% & 47.8\% & 0.61 & -1.36 (0.913) \\
+Weekly HML KNN15 & 52.0\% & 1.231\% & 1.111\% & 47.4\% & 5.38 & 0.68 (0.249) \\
+Weekly RMW KNN11 & 53.0\% & 3.114\% & 2.991\% & 49.0\% & 12.25 & 1.17 (0.122) \\
+Weekly SMB KNN23 & 52.4\% & 1.297\% & 1.163\% & 47.3\% & 6.32 & 1.06 (0.144) \\
+\bottomrule
+\end{tabular}}
+\begin{flushleft}
+\footnotesize{\textit{Notes:} mu+ and mu- are average absolute ETF proxy spreads in correctly and incorrectly classified periods.}
+\end{flushleft}
+\end{table}
+
+\clearpage
+
+\end{document}

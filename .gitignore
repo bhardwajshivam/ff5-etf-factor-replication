@@ -20,3 +20,5 @@ outputs/*
 !outputs/paper_weekly_losers_k13_primary_strategy_bps_2.png
 !outputs/paper_payoff_asymmetry_table.csv
 !outputs/payoff_asymmetry_table.tex
+!outputs/all_tables.tex
+!outputs/all_tables.pdf

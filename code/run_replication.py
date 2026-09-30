@@ -13,6 +13,7 @@ PIPELINE = [
     "04_plot_weekly_logit_winners_losers_cost_panels.py",
     "05_plot_winners_losers_k_sharpe.py",
     "06_make_payoff_asymmetry_table.py",
+    "07_make_all_tables.py",
 ]
 
 
