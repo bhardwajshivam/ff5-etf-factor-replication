@@ -1,0 +1,5 @@
+factor,long,short,description
+SMB,IJR,SPY,S&P SmallCap 600 minus S&P 500
+HML,SPYV,SPYG,S&P 500 Value minus S&P 500 Growth
+RMW,QUAL,SPHB,Quality/profitability proxy minus high-beta proxy
+CMA,SPHQ,QQQ,Conservative/quality proxy minus aggressive growth proxy

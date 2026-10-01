@@ -1,0 +1,5 @@
+factor,long,short,description
+SMB,IJR,SPY,S&P SmallCap 600 minus S&P 500; unchanged baseline size proxy
+HML,SPYV,SPYG,S&P 500 Value minus S&P 500 Growth
+RMW,"QUAL,SPHQ",ARKK,Quality/profitability basket minus speculative innovation proxy
+CMA,SPLV,SPHB,Low-volatility/conservative proxy minus high-beta/aggressive proxy
